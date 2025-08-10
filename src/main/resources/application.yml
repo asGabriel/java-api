@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: java-api
+
+  profiles:
+    active: dev
