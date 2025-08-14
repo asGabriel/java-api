@@ -5,12 +5,12 @@ INSERT INTO Debt (
     paid_value,
     discount_value,
     interest_value,
-    fine,
+    fine_value,
     due_date,
     created_at,
     updated_at,
     deleted_at,
-    debt_status
+    status
 ) VALUES
 (
     RANDOM_UUID(),

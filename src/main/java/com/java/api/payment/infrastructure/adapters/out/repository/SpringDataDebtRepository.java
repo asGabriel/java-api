@@ -4,8 +4,8 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.java.api.payment.domain.model.Debt;
+import com.java.api.payment.infrastructure.adapters.out.entity.DebtEntity;
 
-public interface JpaDebtRepository extends JpaRepository<Debt, UUID> {
-    
+public interface SpringDataDebtRepository extends JpaRepository<DebtEntity, UUID> {
+
 }

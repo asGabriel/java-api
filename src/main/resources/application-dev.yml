@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:file:./data/java-api-dev;DB_CLOSE_DELAY=-1;AUTO_RECONNECT=TRUE
+    url: jdbc:h2:mem:java-api-dev;DB_CLOSE_DELAY=-1;AUTO_RECONNECT=TRUE
     driver-class-name: org.h2.Driver
     username: sa
     password: ""
@@ -22,3 +22,4 @@ spring:
     enabled: true
     locations: classpath:db/migration/h2
     baseline-on-migrate: true
+    clean-disabled: false
