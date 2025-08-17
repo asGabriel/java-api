@@ -1,11 +1,11 @@
-package com.java.api.payment.infrastructure.adapters.out.entity;
+package com.java.api.finance_management.infrastructure.debt.out.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-import com.java.api.payment.domain.model.DebtStatus;
+import com.java.api.finance_management.domain.debt.DebtStatus;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;

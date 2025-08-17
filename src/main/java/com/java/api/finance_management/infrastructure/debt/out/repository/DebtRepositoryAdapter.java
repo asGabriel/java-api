@@ -1,13 +1,13 @@
-package com.java.api.payment.infrastructure.adapters.out.repository;
+package com.java.api.finance_management.infrastructure.debt.out.repository;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
 
-import com.java.api.payment.domain.model.Debt;
-import com.java.api.payment.domain.ports.DebtRepositoryPort;
-import com.java.api.payment.infrastructure.adapters.out.mapper.DebtMapper;
+import com.java.api.finance_management.domain.debt.Debt;
+import com.java.api.finance_management.domain.debt.ports.DebtRepositoryPort;
+import com.java.api.finance_management.infrastructure.debt.mapper.DebtMapper;
 
 @Repository
 public class DebtRepositoryAdapter implements DebtRepositoryPort {
@@ -21,5 +21,10 @@ public class DebtRepositoryAdapter implements DebtRepositoryPort {
     @Override
     public List<Debt> list() {
         return repo.findAll().stream().map(DebtMapper::toDomain).collect(Collectors.toList());
+    }
+
+    @Override
+    public Debt create(Debt debt) {
+        return DebtMapper.toDomain(repo.save(DebtMapper.toEntity(debt)));
     }
 }
