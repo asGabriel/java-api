@@ -1,4 +1,4 @@
-package com.java.api.payment.domain.webhook;
+package com.java.api.finance_management.domain.webhook;
 
 public class TelegramUpdate {
     private TelegramMessage message;

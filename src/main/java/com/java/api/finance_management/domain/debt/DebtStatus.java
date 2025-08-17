@@ -1,4 +1,4 @@
-package com.java.api.payment.domain.debt;
+package com.java.api.finance_management.domain.debt;
 
 public enum DebtStatus {
     UNPAID,

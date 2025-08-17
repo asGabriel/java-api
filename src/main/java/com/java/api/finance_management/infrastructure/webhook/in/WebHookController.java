@@ -1,4 +1,4 @@
-package com.java.api.payment.infrastructure.webhook.in;
+package com.java.api.finance_management.infrastructure.webhook.in;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.java.api.payment.domain.webhook.TelegramUpdate;
+import com.java.api.finance_management.domain.webhook.TelegramUpdate;
 
 @RestController
 @RequestMapping("/webhook")

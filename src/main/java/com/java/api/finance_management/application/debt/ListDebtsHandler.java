@@ -1,11 +1,12 @@
-package com.java.api.payment.application.debt;
+package com.java.api.finance_management.application.debt;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.java.api.payment.domain.debt.Debt;
-import com.java.api.payment.domain.debt.ports.DebtRepositoryPort;
+import com.java.api.finance_management.domain.debt.Debt;
+import com.java.api.finance_management.domain.debt.ports.DebtRepositoryPort;
 
 @Service
 public class ListDebtsHandler {
@@ -15,6 +16,7 @@ public class ListDebtsHandler {
         this.debtRepository = debtRepository;
     }
 
+    @Transactional(readOnly = true)
     public List<Debt> execute() {
         return debtRepository.list();
     }
