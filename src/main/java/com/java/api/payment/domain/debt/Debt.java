@@ -1,4 +1,4 @@
-package com.java.api.payment.domain.model;
+package com.java.api.payment.domain.debt;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

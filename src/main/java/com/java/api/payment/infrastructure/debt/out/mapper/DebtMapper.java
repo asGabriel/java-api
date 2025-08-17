@@ -1,7 +1,7 @@
-package com.java.api.payment.infrastructure.adapters.out.mapper;
+package com.java.api.payment.infrastructure.debt.out.mapper;
 
-import com.java.api.payment.domain.model.Debt;
-import com.java.api.payment.infrastructure.adapters.out.entity.DebtEntity;
+import com.java.api.payment.domain.debt.Debt;
+import com.java.api.payment.infrastructure.debt.out.entity.DebtEntity;
 
 public class DebtMapper {
 

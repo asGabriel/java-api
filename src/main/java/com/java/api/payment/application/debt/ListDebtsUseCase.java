@@ -1,11 +1,11 @@
-package com.java.api.payment.application.usecases;
+package com.java.api.payment.application.debt;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.java.api.payment.domain.model.Debt;
-import com.java.api.payment.domain.ports.DebtRepositoryPort;
+import com.java.api.payment.domain.debt.Debt;
+import com.java.api.payment.domain.debt.ports.DebtRepositoryPort;
 
 @Service
 public class ListDebtsUseCase {
