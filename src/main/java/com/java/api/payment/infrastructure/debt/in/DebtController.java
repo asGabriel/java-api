@@ -6,15 +6,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.java.api.payment.application.debt.ListDebtsUseCase;
+import com.java.api.payment.application.debt.ListDebtsHandler;
 import com.java.api.payment.domain.debt.Debt;
 
 @RestController
 @RequestMapping("/debts")
 public class DebtController {
-    private final ListDebtsUseCase listDebtsUseCase;
+    private final ListDebtsHandler listDebtsUseCase;
 
-    public DebtController(ListDebtsUseCase listDebtsUseCase) {
+    public DebtController(ListDebtsHandler listDebtsUseCase) {
         this.listDebtsUseCase = listDebtsUseCase;
     }
 

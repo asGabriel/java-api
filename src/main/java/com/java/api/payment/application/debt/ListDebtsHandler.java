@@ -8,10 +8,10 @@ import com.java.api.payment.domain.debt.Debt;
 import com.java.api.payment.domain.debt.ports.DebtRepositoryPort;
 
 @Service
-public class ListDebtsUseCase {
+public class ListDebtsHandler {
     private final DebtRepositoryPort debtRepository;
 
-    public ListDebtsUseCase(DebtRepositoryPort debtRepository) {
+    public ListDebtsHandler(DebtRepositoryPort debtRepository) {
         this.debtRepository = debtRepository;
     }
 
