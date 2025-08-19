@@ -15,7 +15,8 @@ public class WebHookController {
     @PostMapping
     public ResponseEntity<Void> webhook(@RequestBody TelegramUpdate body) {
         System.out.println(body.getMessage().getText());
-
+        System.out.println(body.getMessage().getChat().getId());
+        System.out.println(body.getCommand());
         return ResponseEntity.ok().build();
     }
 }
