@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.java.api.finance_management.domain.webhook.TelegramUpdate;
+import com.java.api.finance_management.infrastructure.webhook.in.dto.TelegramUpdate;
 
 @RestController
 @RequestMapping("/webhook")
@@ -16,7 +16,6 @@ public class WebHookController {
     public ResponseEntity<Void> webhook(@RequestBody TelegramUpdate body) {
         System.out.println(body.getMessage().getText());
         System.out.println(body.getMessage().getChat().getId());
-        System.out.println(body.getCommand());
         return ResponseEntity.ok().build();
     }
 }
