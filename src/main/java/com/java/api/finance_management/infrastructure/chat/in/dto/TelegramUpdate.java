@@ -1,4 +1,4 @@
-package com.java.api.finance_management.infrastructure.webhook.in.dto;
+package com.java.api.finance_management.infrastructure.chat.in.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

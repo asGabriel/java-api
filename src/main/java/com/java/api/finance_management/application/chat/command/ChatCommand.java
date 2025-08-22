@@ -1,14 +1,13 @@
-package com.java.api.finance_management.domain.webhook;
+package com.java.api.finance_management.application.chat.command;
 
-public enum TelegramCommand {
-    DESPESA("despesa"),
-    BAIXA("baixa"),
-    LISTAR("listar"),
+public enum ChatCommand {
+    CREATE_DEBT("despesa"),
+    LIST_DEBTS("listar"),
     UNKNOWN("unknown");
 
     private final String command;
 
-    TelegramCommand(String command) {
+    ChatCommand(String command) {
         this.command = command;
     }
 
@@ -16,7 +15,7 @@ public enum TelegramCommand {
         return command;
     }
 
-    public static TelegramCommand fromString(String commandText) {
+    public static ChatCommand fromString(String commandText) {
         if (commandText == null || commandText.trim().isEmpty()) {
             return UNKNOWN;
         }
@@ -30,7 +29,7 @@ public enum TelegramCommand {
         String withoutSlash = text.substring(1);
         String command = withoutSlash.split("\\s+")[0].toLowerCase();
 
-        for (TelegramCommand type : TelegramCommand.values()) {
+        for (ChatCommand type : ChatCommand.values()) {
             if (type.command.equals(command)) {
                 return type;
             }
