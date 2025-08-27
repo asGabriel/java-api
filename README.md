@@ -37,8 +37,47 @@
 - ✅ **Entity Mapping** - Separação entre domain e persistence
 - ✅ **Database Migrations** - Versionamento controlado
 
-## 🎯 Funcionalidade
-API REST para gerenciamento de débitos financeiros com operações CRUD básicas.
+## 🎯 Funcionalidades
+- **API REST** para gerenciamento financeiro
+- **Bot Telegram** integrado para interação via chat
+- **Comandos disponíveis:**
+  - `/listar` - Lista todas as despesas cadastradas
+  - `/despesa` - Criar nova despesa (em desenvolvimento)
+
+## 🚀 Como Executar
+
+### **Pré-requisitos**
+- Java 21+
+- Maven 3.6+
+- Bot do Telegram configurado
+
+### **1. Configurar Bot do Telegram**
+1. Crie um bot no `@BotFather` (Telegram)
+2. Obtenha o **token** do bot
+3. Obtenha o **chat_id** onde o bot será usado
+
+### **2. Configurar Variáveis de Ambiente**
+```bash
+export TELEGRAM_TOKEN="seu-bot-token-aqui"
+export TELEGRAM_API_URL="https://api.telegram.org"
+```
+
+### **3. Executar Aplicação**
+```bash
+# Com Maven instalado
+mvn spring-boot:run
+```
+
+### **4. Configurar Webhook (Para receber mensagens)**
+```bash
+# Para desenvolvimento local, use ngrok:
+ngrok http 8080
+
+# Configure o webhook do Telegram:
+curl -X POST "https://api.telegram.org/bot<SEU_TOKEN>/setWebhook" \
+     -H "Content-Type: application/json" \
+     -d '{"url": "https://sua-url-ngrok.com/webhook"}'
+```
 
 ---
 *Projeto desenvolvido para demonstrar proficiência em desenvolvimento backend Java com foco em arquitetura limpa e boas práticas.*
