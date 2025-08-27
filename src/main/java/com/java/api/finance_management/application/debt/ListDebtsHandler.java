@@ -29,9 +29,26 @@ public class ListDebtsHandler implements CommandHandler {
     }
 
     @Override
-    public void handle(ChatCommand command) {
+    public String handle(ChatCommand command, String chatId) {
         List<Debt> debts = execute();
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handle'");
+        
+        if (debts.isEmpty()) {
+            return "📋 Você não possui débitos cadastrados.";
+        }
+        
+        StringBuilder message = new StringBuilder("💰 **Suas Despesas:**\n\n");
+        
+        for (int i = 0; i < debts.size(); i++) {
+            Debt debt = debts.get(i);
+            message.append(String.format("%d. %s - R$ %.2f\n", 
+                i + 1, 
+                debt.getDescription(), 
+                debt.getTotalValue()));
+        }
+        
+        message.append(String.format("\n💳 Total: R$ %.2f", 
+            debts.stream().mapToDouble(debt -> debt.getTotalValue().doubleValue()).sum()));
+        
+        return message.toString();
     }
 }
