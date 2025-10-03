@@ -23,3 +23,9 @@ spring:
     locations: classpath:db/migration/h2
     baseline-on-migrate: true
     clean-disabled: false
+
+# Telegram configuration
+telegram:
+  token: ${TELEGRAM_TOKEN:dummy-token}
+  api:
+    url: ${TELEGRAM_API_URL:https://api.telegram.org}
